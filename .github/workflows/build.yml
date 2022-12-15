@@ -2,7 +2,7 @@
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
 
 name: Node.js CI
-
+run-name: ${{ github.actor }} is running Node.js CI
 on:
   push:
     branches: [ $default-branch ]
@@ -25,7 +25,11 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'yarn'
-    - run: yarn
-    - run: yarn build
-    # - run: npm test
+    - name: Install dependencies
+      run: yarn
+    - name: Build output file
+      run: yarn build
+    # - name: Publish to npmjs
+    #   run: yarn publish
+    #   env:
+    #       NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTOMATION_TOKEN }}
