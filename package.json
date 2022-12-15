@@ -1,6 +1,6 @@
 {
   "name": "@stormwild/ckeditor5-build-custom",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Custom editor based on the classic editor build of CKEditor 5 – the best browser-based rich text editor.",
   "main": "./build/ckeditor.js",
   "repository": "git@github.com:stormwild/ckeditor.git",
