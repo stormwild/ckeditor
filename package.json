@@ -6,7 +6,7 @@
   "repository": "git@github.com:stormwild/ckeditor.git",
   "author": "Alexander R Torrijos <artorrijos@gmail.com>",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "scripts": {
     "build": "webpack --mode production",
     "preversion": "yarn run build"
